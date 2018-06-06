@@ -1,0 +1,59 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:id="@+id/status_text"
+        android:layout_alignParentTop="true"
+        android:text="Shift Running"
+        android:background="@android:color/holo_green_light"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"
+        android:text="Start Shift"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/status_text"
+        android:onClick="startShift"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="Stop Shift"
+        android:id="@+id/stops"
+        android:layout_below="@+id/status_text"
+        android:layout_alignParentRight="true"
+        android:onClick="stopShift"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stops"
+        android:layout_alignParentRight="true"
+        android:onClick="showinfo"
+        android:id="@+id/infobtn"
+        android:text="View Shift Information"></Button>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/status_text"
+        tools:context="com.example.dheeraj.backgroundlocationtracker.MapsScreen" />
+
+
+
+</RelativeLayout>
+
+
